@@ -116,14 +116,6 @@ export interface ThemedToken extends TokenStyles, TokenBase {}
 
 export interface TokenBase {
   /**
-   * The type of the token
-   * 0 - other
-   * 1 - comment
-   * 2 - string
-   * 3 - regex
-   */
-  type: number
-  /**
    * The content of the token
    */
   content: string
@@ -131,6 +123,14 @@ export interface TokenBase {
    * The start offset of the token, relative to the input code. 0-indexed.
    */
   offset: number
+  /**
+   * The type of the token
+   * 0 - other
+   * 1 - comment
+   * 2 - string
+   * 3 - regex
+   */
+  type?: number
   /**
    * Explanation of
    *
@@ -181,7 +181,7 @@ export interface TokenizeWithThemeOptions {
    *
    * @default false
    */
-  includeExplanation?: boolean | 'scopeName'
+  includeExplanation?: boolean | 'scopeName' | 'tokenType'
 
   /**
    * A map of color names to new color values.
