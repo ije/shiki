@@ -116,6 +116,14 @@ export interface ThemedToken extends TokenStyles, TokenBase {}
 
 export interface TokenBase {
   /**
+   * The type of the token
+   * 0 - other
+   * 1 - comment
+   * 2 - string
+   * 3 - regex
+   */
+  type: number
+  /**
    * The content of the token
    */
   content: string

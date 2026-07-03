@@ -39,7 +39,7 @@ export function codeToTokensBase(
   const lang = primitive.resolveLangAlias(options.lang || 'text')
 
   if (isPlainLang(lang) || isNoneTheme(themeName))
-    return splitLines(code).map(line => [{ content: line[0], offset: line[1] }])
+    return splitLines(code).map(line => [{ type: 0, content: line[0], offset: line[1] }])
 
   const { theme, colorMap } = primitive.setTheme(themeName)
 
@@ -169,6 +169,7 @@ function _tokenizeWithTheme(
     if (tokenizeMaxLineLength > 0 && line.length >= tokenizeMaxLineLength) {
       actual = []
       final.push([{
+        type: 0,
         content: line,
         offset: lineOffset,
         color: '',
@@ -202,8 +203,10 @@ function _tokenizeWithTheme(
         colorReplacements,
       )
       const fontStyle: FontStyle = EncodedTokenMetadata.getFontStyle(metadata)
+      const type: number = EncodedTokenMetadata.getTokenType(metadata)
 
       const token: ThemedToken = {
+        type,
         content: line.substring(startIndex, nextStartIndex),
         offset: lineOffset + startIndex,
         color,
