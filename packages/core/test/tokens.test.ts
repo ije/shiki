@@ -17,10 +17,12 @@ it('includeExplanation', async () => {
   const caseFalse = await codeToTokensBase(engine, code, { lang: 'js', theme: 'vitesse-dark', includeExplanation: false })
   const caseTrue = await codeToTokensBase(engine, code, { lang: 'js', theme: 'vitesse-dark', includeExplanation: true })
   const caseScopeName = await codeToTokensBase(engine, code, { lang: 'js', theme: 'vitesse-dark', includeExplanation: 'scopeName' })
+  const caseTokenType = await codeToTokensBase(engine, code, { lang: 'js', theme: 'vitesse-dark', includeExplanation: 'tokenType' })
 
   expect(caseFalse).toMatchSnapshot('false')
   expect(caseTrue).toMatchSnapshot('true')
   expect(caseScopeName).toMatchSnapshot('scopeName')
+  expect(caseTokenType).toMatchSnapshot('tokenType')
 })
 
 describe('defaultColor light-dark()', () => {

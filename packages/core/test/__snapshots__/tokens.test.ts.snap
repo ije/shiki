@@ -773,6 +773,69 @@ exports[`includeExplanation > scopeName 1`] = `
 ]
 `;
 
+exports[`includeExplanation > tokenType 1`] = `
+[
+  [
+    {
+      "color": "#BD976A",
+      "content": "console",
+      "fontStyle": 0,
+      "offset": 0,
+      "type": 0,
+    },
+    {
+      "color": "#666666",
+      "content": ".",
+      "fontStyle": 0,
+      "offset": 7,
+      "type": 0,
+    },
+    {
+      "color": "#80A665",
+      "content": "log",
+      "fontStyle": 0,
+      "offset": 8,
+      "type": 0,
+    },
+    {
+      "color": "#666666",
+      "content": "(",
+      "fontStyle": 0,
+      "offset": 11,
+      "type": 0,
+    },
+    {
+      "color": "#C98A7D77",
+      "content": """,
+      "fontStyle": 0,
+      "offset": 12,
+      "type": 2,
+    },
+    {
+      "color": "#C98A7D",
+      "content": "hello",
+      "fontStyle": 0,
+      "offset": 13,
+      "type": 2,
+    },
+    {
+      "color": "#C98A7D77",
+      "content": """,
+      "fontStyle": 0,
+      "offset": 18,
+      "type": 2,
+    },
+    {
+      "color": "#666666",
+      "content": ")",
+      "fontStyle": 0,
+      "offset": 19,
+      "type": 0,
+    },
+  ],
+]
+`;
+
 exports[`includeExplanation > true 1`] = `
 [
   [
